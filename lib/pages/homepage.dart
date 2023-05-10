@@ -11,10 +11,11 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        floatingActionButton: FloatingActionButton(
+        floatingActionButton: FloatingActionButton(backgroundColor: Colors.black,
           onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) {
             return CartPage();
           },)),
+          child: const Icon(Icons.shopping_bag,color: Colors.white,),
         ),
         body: Padding(
           padding:
@@ -61,7 +62,9 @@ class Homepage extends StatelessWidget {
                           ItemPrice: value.shopItems[index][1],
                           ImagePath: value.shopItems[index][2],
                           color: value.shopItems[index][3],
-                          onPressed: () { },
+                          onPressed: () {
+                            Provider.of<CartModel>(context, listen: false).addItemToCart(index);
+                          },
                         );
                       });
                 }))
