@@ -63,15 +63,20 @@ class GroceryItemTile extends StatelessWidget {
                           SizedBox(
                             height: 5,
                           ),
-                          MaterialButton(
+                          ElevatedButton(
                             onPressed: onPressed ,
-                            color: color[700],
                             child: Text(
                               '\$' + ItemPrice,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                               ),
+                            ),
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)
+                              )),
+                              backgroundColor: MaterialStateProperty.all(color),
                             ),
                           )
                         ],
