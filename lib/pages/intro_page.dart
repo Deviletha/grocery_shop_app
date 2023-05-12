@@ -19,13 +19,14 @@ class IntroPage extends StatelessWidget {
               textAlign: TextAlign.center,
               style:
             TextStyle(fontSize: 40,fontWeight: FontWeight.bold, ),),
-
+            SizedBox(
+              height: 30,
+            ),
             Text("Fresh items everyday",
               textAlign: TextAlign.center,
               style:
               TextStyle(fontSize: 15,fontWeight: FontWeight.bold, ),),
             Spacer(),
-
             // get started button
             GestureDetector(
               onTap: () => Navigator.pushReplacement(
@@ -53,7 +54,7 @@ class IntroPage extends StatelessWidget {
               ),
             ),
 
-            const Spacer(),
+            Spacer(),
           ],
         ),
       )

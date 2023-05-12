@@ -22,35 +22,98 @@ class GroceryItemTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(12),
       child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          color: color[100],
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Image.asset(
-              ImagePath,
-              height: 50,
+        width: 190,
+        child: Card(
+          shadowColor: Colors.black,
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.all(
+              Radius.circular(15),
             ),
-            Text(
-              ItemName,
-              style: TextStyle(fontSize: 20),
+          ),
+          child: Container(
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.black)),
+            child: Column(
+              children: [
+                Expanded(
+                    flex: 3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(15),
+                              topLeft: Radius.circular(15)),
+                          image: DecorationImage(
+                              image: AssetImage(
+                                        ImagePath,
+                                      ),
+                              fit: BoxFit.fill)),
+                    )),
+                Expanded(
+                    flex: 3,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0 ),
+                      child: Column(
+                        crossAxisAlignment:
+                        CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            ItemName,
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          MaterialButton(
+                            onPressed: onPressed ,
+                            color: color[700],
+                            child: Text(
+                              '\$' + ItemPrice,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ))
+              ],
             ),
-            MaterialButton(
-              onPressed: onPressed,
-              color: color[700],
-              child: Text(
-                '\$' + ItemPrice,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            )
-          ],
+          ),
         ),
       ),
+
+
+      //   decoration: BoxDecoration(
+      //     borderRadius: BorderRadius.circular(12),
+      //     color: color[100],
+      //   ),
+      //   child:
+      //   Column(
+      //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //     children: [
+      //       Image.asset(
+      //         ImagePath,
+      //         height: 50,
+      //       ),
+      //       Text(
+      //         ItemName,
+      //         style: TextStyle(fontSize: 20),
+      //       ),
+      //       MaterialButton(
+      //         onPressed: onPressed ,
+      //         color: color[700],
+      //         child: Text(
+      //           '\$' + ItemPrice,
+      //           style: TextStyle(
+      //             color: Colors.white,
+      //             fontWeight: FontWeight.bold,
+      //           ),
+      //         ),
+      //       )
+      //     ],
+      //   ),
+      // ),
     );
   }
 }

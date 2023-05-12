@@ -25,7 +25,7 @@ class Homepage extends StatelessWidget {
           children :[
                 Text("Good Morning!"),
                 SizedBox(
-                  height: 4,
+                  height: 10,
                 ),
                 Text(
                   "Let's order fresh items for you",
@@ -35,7 +35,7 @@ class Homepage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 24,
+                  height: 15,
                 ),
                 Divider(
                   thickness: 4,
