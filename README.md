@@ -1,16 +1,6 @@
 # grocery_shop_app
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Output
+![grocery_intro](https://github.com/Deviletha/grocery_shop_app/assets/118511923/2ed8abc8-a23e-4cee-9538-6f0d483e1122)
+![grocery_item](https://github.com/Deviletha/grocery_shop_app/assets/118511923/b8bfd66b-1e87-415f-8945-abfc46ba253a)
+![grocery_cart](https://github.com/Deviletha/grocery_shop_app/assets/118511923/1c731156-4578-4783-92eb-7ee8be50a414)
